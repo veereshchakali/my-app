@@ -33,6 +33,7 @@ import { PracticeComponent } from './practice/practice.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { AccountComponent } from './account/account.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateProductComponent } from './create-product/create-product.component';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
     PracticeComponent,
     CreateVehicleComponent,
     AccountComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    CreateProductComponent
   ],
   imports: [
     BrowserModule,

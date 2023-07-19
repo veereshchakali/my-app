@@ -29,6 +29,7 @@ import { PracticeComponent } from "./practice/practice.component";
 import { CreateVehicleComponent } from "./create-vehicle/create-vehicle.component";
 import { AccountComponent } from "./account/account.component";
 import { CreateUserComponent } from "./create-user/create-user.component";
+import { CreateProductComponent } from "./create-product/create-product.component";
 
 const routes:Routes = [
     {path:'login', component:LoginComponent},
@@ -57,7 +58,8 @@ const routes:Routes = [
        {path:'practice',component:PracticeComponent},
        {path:'create-vehicle',component:CreateVehicleComponent},
        {path:'account',component:AccountComponent},
-       {path:'create-user',component:CreateUserComponent}
+       {path:'create-user',component:CreateUserComponent},
+       {path:'create-product',component:CreateProductComponent}
     ]},
     {path:'',component:LoginComponent},
     {path:'**',component:PagenotfoundComponent}

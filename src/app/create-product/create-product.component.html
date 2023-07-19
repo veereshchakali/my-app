@@ -1,0 +1,64 @@
+<!-- <p>create-product works!</p> -->
+
+<form [formGroup]="productForm ">
+    <label>Name:</label>
+    <input type="text" formControlName="name">
+    <br>
+    <label>Price:</label>
+    <input type="text" formControlName="price">
+    <br>
+    <label>Color:</label>
+    <input type="text" formControlName="color">
+    <br>
+
+    <div formGroupName="features">
+        <label>Ram:</label>
+        <input type="text" formControlName="ram">
+        <br>
+        <label>Battery:</label>
+        <input type="text" formControlName="battery">
+        <br>
+        <label>Processor:</label>
+        <input type="text" formControlName="processor">
+        <br>
+    </div>
+
+    <button (click)="addcomments()">add comments</button>
+    <br>
+    <div formArrayName="comments">
+        <div *ngFor="let comment of commentsFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+                <label>Name:</label>
+                <input type="text" formControlName="name">
+                <br>
+                <label>Time:</label>
+                <input type="time" formControlName="time">
+                <br>
+                <label>Messege:</label>
+                <input type="text" formControlName="messege">
+                <br>
+                <button class="btn btn-danger" (click)="delete(i)">delete</button>
+            </div>
+        </div>
+    </div>
+
+    <label>Payment:</label>
+    <input type="radio" name="type" formControlName="payment" value="upiAddress">
+    <label>Upiaddress</label>
+    <input type="radio" name="type" formControlName="payment" value="netBanking">
+    <label>netbanking</label>
+    <br>
+    <div *ngIf="productForm.get('payment')?.value == 'upiAddress'">
+        <label>upiAddress</label>
+        <input type="text" formControlName="upiAddress">
+        <br>
+    </div>
+
+    <div *ngIf="productForm.get('payment')?.value == 'netBanking'">
+        <label>netBanking</label>
+        <input type="text" formControlName="netBanking">
+
+    </div>
+
+
+    <button (click)="submit()" class="btn btn-warning">submit</button>
