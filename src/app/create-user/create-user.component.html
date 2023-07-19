@@ -18,14 +18,33 @@
         <label>Hno:</label>
         <input type="text" formControlName="hno">
         <br>
-         <label>State:</label>
-         <input type="text" formControlName="state">
-         <br>
-         <label>Pin:</label>
-         <input type="text" formControlName="pin">
-         <br>
+        <label>State:</label>
+        <input type="text" formControlName="state">
+        <br>
+        <label>Pin:</label>
+        <input type="text" formControlName="pin">
+        <br>
 
     </div>
-     <button (click)="submit()" class="btn btn-warning">submit</button>
+
+    <label>type:</label>
+    <input type="radio" name="type" formControlName="type" value="dayScholor">
+    <label>Day scholor</label>
+    <input type="radio" name="type" formControlName="type" value="resindential">
+    <label>Residential</label>
+    <br>
+
+    <div *ngIf="userForm.get('type')?.value == 'dayScholor'">
+        <label>bus fee:</label>
+        <input type="number" formControlName="busFee">
+        <br>
+    </div>
+
+<div *ngIf="userForm.get('type')?.value == 'resindential'">
+    <label>hostel fee:</label>
+    <input type="number" formControlName="hostelFee">
+    <br>
+  </div>   
+    <button (click)="submit()" class="btn btn-warning">submit</button>
 
 </form>
