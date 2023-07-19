@@ -1,0 +1,27 @@
+
+<div class="parent" *ngFor="let personal of personals">
+    <div class="c1 ">  
+        <h1>Personal details</h1>
+        <p> name : {{personal.name}}</p>
+        <p> username: {{personal.username}}</p>
+        <p> email: {{personal.email}}</p>
+    </div>
+    <div class="c2" >
+        <h1>Address details</h1>
+        <p> street: {{personal.address.street}}</p>
+        <p> suite: {{personal.address.suite}}</p>
+        <p> city: {{personal.address.city}}</p>
+        <p> zipcode: {{personal.address.zipcode}}</p>
+        <p> lat: {{personal.address.geo.lat}}</p>
+        <p>lng: {{personal.address.geo.lng}}</p>
+        <p>phone: {{personal.phone}}</p>
+        <p> website: {{personal.website}}</p>
+    </div>  
+    
+    <div class="c3">   
+        <h1>Company details</h1>
+        <p>name: {{personal.company.name}}</p>
+        <p>catchPhrase: {{personal.company.catchPhrase}}</p>
+        <p>bs: {{personal.company.bs}}</p>
+    </div>
+   </div>

@@ -1,0 +1,14 @@
+.parent{
+    display: flex;
+    justify-content: space-evenly;
+    // align-items: center;
+    line-height: 1;
+   
+    
+}
+.parent:nth-child(even){
+    background-color: aqua;
+}
+.parent:nth-child(odd){
+    background-color: blue;
+}

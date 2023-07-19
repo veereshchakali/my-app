@@ -1,0 +1,20 @@
+<p>Mail works!</p>
+
+<div class="parent" *ngFor="let mail of mails">
+    <div class="child">
+        <div class="c1">
+            <img height="100px" width="100px"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpVGCz2wjlmAs9taiT6vW7Yjd3km37Pz7ZkPXZGJN3or6Nmrhk-WHsgAYjvPzmdgeKE8&usqp=CAU"
+                alt="">
+        </div>
+        <div class="c2" [ngStyle]="{'font-weight':mail.completed>=true?100:900}">
+            <p>userId {{mail.userId}}</p>
+            <p>id {{mail.id}}</p>
+            <p>title {{mail.title}}</p>
+            <p >completed {{mail.completed}}</p>
+        </div>
+    </div>
+
+
+
+</div>

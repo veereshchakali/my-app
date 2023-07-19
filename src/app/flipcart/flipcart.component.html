@@ -1,0 +1,19 @@
+<p>flipcart works!</p>
+
+<div class="row veeresh" >
+    <div style="border: 1px solid green;" class="col- lg-3 col-md-4 col-sm-6 col-12 card" *ngFor="let product of products">
+    
+      <h4><img src="{{product.image}}" alt="" width="150px" height="150px"></h4>
+      <h4><span>id:</span>{{product.id}}</h4>
+    <h4><span>title:</span>{{product.title}}</h4>
+    <h4><span>price:</span>{{product.price}}</h4>
+    <h4 style="height: 100px; overflow: auto;"><span>description:</span>{{product.description}}</h4>
+    <h4><span>category:</span>{{product.category}}</h4>
+    <h4><span>rating:</span>{{product.rating.rate}}</h4>
+    
+    
+
+    
+    </div>
+    
+</div>

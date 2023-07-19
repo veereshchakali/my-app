@@ -1,0 +1,15 @@
+<p>bmi works!</p>
+
+<h1>Body Mass Index</h1>
+
+<label>Height:</label>
+<input type="number" [(ngModel)]="height">
+<br>
+
+<label for>Weight</label>
+<input type="number" [(ngModel)]="weight">
+<br>
+
+<button (click)="calculate()">Calculate</button>
+
+<h1>Result is:{{result}}</h1>
