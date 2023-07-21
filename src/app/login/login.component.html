@@ -1,12 +1,17 @@
 <div class="parent">
     <div class="child">
-        <h1>Login</h1>
-        <label>Email:</label>
-        <input type="text" placeholder="Enter email">
-        <br>
-        <label>Password:</label>
-        <input type="password" placeholder="Enter password">
+        <form [formGroup]="loginForm">
+            <h1>Login</h1>
 
-        <button routerLink="/dashboard">Submit</button>
+            <label>Email:</label>
+            <input type="text" placeholder="Enter email" formControlName="email">
+            <br>
+
+            <label>Password:</label>
+            <input type="password" placeholder="Enter password" formControlName="password">
+            <br>
+
+            <button (click)="login()" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 </div>

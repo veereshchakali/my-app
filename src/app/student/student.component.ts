@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StusentService } from '../student.service';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-student',
@@ -15,8 +15,9 @@ export class StudentComponent {
   public limit:string = "";
   public page:string = "";
    
-  constructor(private studentservice: StusentService){
-    this.studentservice.getstudents().subscribe(
+
+  constructor(private studentService: StudentService){
+    this.studentService.getstudents().subscribe(
       (data:any)=>{
         this.students=data;
       },
@@ -27,7 +28,7 @@ export class StudentComponent {
   }
 
   getfilterstudents(){
-    this.studentservice.getfilterstudents(this.term).subscribe(
+    this.studentService.getfilterstudents(this.term).subscribe(
       (data:any)=>{
         this.students = data;
       },
@@ -38,7 +39,7 @@ export class StudentComponent {
   }
 
  getsortedstudents(){
-  this.studentservice.getsortedstudents(this.column,this.order).subscribe(
+  this.studentService.getsortedstudents(this.column,this.order).subscribe(
     (data:any)=>{
       this.students = data;
     },
@@ -49,7 +50,7 @@ export class StudentComponent {
  }
 
  getpagedstudents(){
-   this.studentservice.getpagedstudents(this.limit,this.page).subscribe(
+   this.studentService.getpagedstudents(this.limit,this.page).subscribe(
     (data:any)=>{
       this.students = data;
     },
@@ -59,7 +60,7 @@ export class StudentComponent {
    )
  }
   deletestudents(id:any){
-    this.studentservice.deletestudents(id).subscribe(
+    this.studentService.deletestudents(id).subscribe(
       (data:any)=>{
         alert("deleted succesfully");
         location.reload();

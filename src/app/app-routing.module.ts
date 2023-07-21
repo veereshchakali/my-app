@@ -30,10 +30,11 @@ import { CreateVehicleComponent } from "./create-vehicle/create-vehicle.componen
 import { AccountComponent } from "./account/account.component";
 import { CreateUserComponent } from "./create-user/create-user.component";
 import { CreateProductComponent } from "./create-product/create-product.component";
+import { authenticationGuard } from "./authentication.guard";
 
 const routes:Routes = [
     {path:'login', component:LoginComponent},
-    {path:'dashboard', component: DashboardComponent,children:[
+    {path:'dashboard', component: DashboardComponent,canActivate:[authenticationGuard],children:[
        {path:'home',component:HomeComponent},
        {path:'info',component:InfoComponent}, 
        {path:'variable',component:VariableComponent},
