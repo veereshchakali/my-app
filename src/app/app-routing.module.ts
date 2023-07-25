@@ -33,6 +33,7 @@ import { CreateProductComponent } from "./create-product/create-product.componen
 import { authenticationGuard } from "./authentication.guard";
 import { notifyGuard } from "./notify.guard";
 import { VechicleDetailsComponent } from "./vechicle-details/vechicle-details.component";
+import { ProductsComponent } from "./products/products.component";
 
 const routes:Routes = [
     {path:'login', component:LoginComponent},
@@ -65,6 +66,7 @@ const routes:Routes = [
        {path:'create-user',component:CreateUserComponent, canActivate:[notifyGuard]},
        {path:'create-product',component:CreateProductComponent, canDeactivate:[notifyGuard]},
        {path:'vehicle-details/:id',component:VechicleDetailsComponent},
+       {path:'products',component:ProductsComponent}
        
     ]},
     {path:'',component:LoginComponent},
