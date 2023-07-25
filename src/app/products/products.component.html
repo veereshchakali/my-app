@@ -1,1 +1,25 @@
 <p>products works!</p>
+<h1 appImp>Products</h1>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Book</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.sno}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price | price}}</td>
+            <td>{{product.rating}}</td>
+            <td>{{product.book}}</td>
+        </tr>
+    </tbody>
+    <button></button>
+</table>
