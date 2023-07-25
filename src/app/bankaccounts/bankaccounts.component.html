@@ -34,7 +34,7 @@
     <thead>
         <tr>
             <th>account_name</th>
-            <th>available_balance</th>
+            <th>available_balance </th>
             <th>account_number</th>
             <th>city</th>
             <th>profie_picture</th>
@@ -45,13 +45,13 @@
     <tbody>
         <tr *ngFor="let account of accounts" >
             <td>{{account.account_name}}</td>
-            <td>{{account.available_balance}}</td>
+            <td>{{account.available_balance | price}}</td>
             <td>{{account.account_number}}</td>
             <td>{{account.city}}</td>
             <td>
                 <img src="{{account.profie_picture}}" alt="" width="50px" height="50px">
             </td>
-            <td>{{account.id}}</td>
+            <td>{{account.id | age}}</td>
 
             <button (click)="deleteaccount(account.id )" class="btn btn-danger">delete</button>
              
