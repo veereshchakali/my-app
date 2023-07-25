@@ -51,7 +51,8 @@
         <br>
         <label>State:</label>
         <input type="text" formControlName="state">
-        <span class="text text-danger" *ngIf="userForm.get('address')?.get('state')?.invalid && userForm.get('address')?.get('state')?.touched">
+        <span class="text text-danger"
+            *ngIf="userForm.get('address')?.get('state')?.invalid && userForm.get('address')?.get('state')?.touched">
             <span *ngIf="userForm.get('address')?.get('state')?.errors?.['required']">State is required</span>
             <span *ngIf="userForm.get('address')?.get('state')?.errors?.['minlength']">Min 3 chars required</span>
             <span *ngIf="userForm.get('address')?.get('state')?.errors?.['maxlength']">Max 10 chars required</span>
@@ -60,10 +61,12 @@
 
         <label>Pin:</label>
         <input type="text" formControlName="pin">
-        <span class="text text-danger" *ngIf="userForm.get('address')?.get('pin')?.invalid && userForm.get('address')?.get('pin')?.touched">
+        <span class="text text-danger"
+            *ngIf="userForm.get('address')?.get('pin')?.invalid && userForm.get('address')?.get('pin')?.touched">
             <span *ngIf="userForm.get('address')?.get('pin')?.errors?.['required']">Pin is required</span>
             <span *ngIf="userForm.get('address')?.get('pin')?.errors?.['minlength']">Pin no should be 6 digits</span>
-            <span *ngIf="userForm.get('address')?.get('pin')?.errors?.['maxlength']">Pin no should be 6 digits only</span>
+            <span *ngIf="userForm.get('address')?.get('pin')?.errors?.['maxlength']">Pin no should be 6 digits
+                only</span>
         </span>
         <br>
 
@@ -97,8 +100,9 @@
                 <h1>card {{i+1}} </h1>
                 <label>no:</label>
                 <input type="number" formControlName="no">
-                <span *ngIf="cardsFormArray.controls[i].get('no')?. invalid && cardsFormArray.controls[i].get('no')?.touched">
-                   <span *ngIf="cardsFormArray.controls[i].get('no')?.errors?.['required']">no is required</span> 
+                <span
+                    *ngIf="cardsFormArray.controls[i].get('no')?. invalid && cardsFormArray.controls[i].get('no')?.touched">
+                    <span *ngIf="cardsFormArray.controls[i].get('no')?.errors?.['required']">no is required</span>
                 </span>
                 <br>
 

@@ -35,6 +35,10 @@ import { AccountComponent } from './account/account.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { VechicleDetailsComponent } from './vechicle-details/vechicle-details.component';
+import { PricePipe } from './price.pipe';
+import { AgePipe } from './age.pipe';
+import { ImpDirective } from './imp.directive';
+import { ProductsComponent } from './products/products.component';
 
 
 @NgModule({
@@ -69,7 +73,11 @@ import { VechicleDetailsComponent } from './vechicle-details/vechicle-details.co
     AccountComponent,
     CreateUserComponent,
     CreateProductComponent,
-    VechicleDetailsComponent
+    VechicleDetailsComponent,
+    PricePipe,
+    AgePipe,
+    ImpDirective,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
