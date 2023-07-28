@@ -1,0 +1,40 @@
+.parent{
+    height: 100vh;
+    width:80vw;
+    background-color: rgb(137, 153, 12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.child{
+    height: 60%;
+    width: 60%;
+    background-color:rgb(13, 127, 153);
+    padding: 50px;
+    border-radius: 50px;
+
+}
+.p1{
+    height: 40%;
+    width: 80%;
+}
+
+label{
+    display: inline-block;
+    width: 100px;
+    height:50px;
+    padding: 10px;
+    
+}
+.c{
+    color: red;
+}
+.p2{
+    width: 100%;
+    height: 40%;  
+}
+input{
+    border-radius: 5px;
+    border: 0px;
+}
