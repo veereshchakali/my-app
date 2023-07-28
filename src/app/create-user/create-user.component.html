@@ -41,7 +41,8 @@
     <input type="text" formControlName="email">
     <span class="text text-danger" *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
         <span *ngIf="userForm.get('email')?.errors?.['required']">Email is required</span>
-        <span *ngIf="userForm.get('email')?.errors?.['email']">Invalid email</span>
+        <span *ngIf="userForm.get('email')?.errors?.['email']">Invalid email </span>
+        <span *ngIf="userForm.get('email')?.errors?.['domainValidator']">only capgemini mail accepted</span>
     </span>
     <br>
 
@@ -56,6 +57,7 @@
             <span *ngIf="userForm.get('address')?.get('state')?.errors?.['required']">State is required</span>
             <span *ngIf="userForm.get('address')?.get('state')?.errors?.['minlength']">Min 3 chars required</span>
             <span *ngIf="userForm.get('address')?.get('state')?.errors?.['maxlength']">Max 10 chars required</span>
+            <span *ngIf="userForm.get('address')?.get('state')?.errors?.['stateValidator']">only ts ap accepted</span>
         </span>
         <br>
 
@@ -65,8 +67,7 @@
             *ngIf="userForm.get('address')?.get('pin')?.invalid && userForm.get('address')?.get('pin')?.touched">
             <span *ngIf="userForm.get('address')?.get('pin')?.errors?.['required']">Pin is required</span>
             <span *ngIf="userForm.get('address')?.get('pin')?.errors?.['minlength']">Pin no should be 6 digits</span>
-            <span *ngIf="userForm.get('address')?.get('pin')?.errors?.['maxlength']">Pin no should be 6 digits
-                only</span>
+            <span *ngIf="userForm.get('address')?.get('pin')?.errors?.['maxlength']">Pin no should be 6 digits only</span>
         </span>
         <br>
 
